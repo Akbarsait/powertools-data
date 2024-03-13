@@ -14,3 +14,6 @@ $RECYCLE.BIN/
 # Data SOR contents
 data/SOR
 powerbi/pl300/links.md
+data
+/aws/
+/assets/aws/
