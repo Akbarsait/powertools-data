@@ -27,6 +27,11 @@
  - Management Groups can include multiple azure subscriptions.![MG](/assets/azure/8managementgroups.png)
    - Subscriptions inherit conditions applied to MG. 
 
+ - Regions:
+   - Regions are made up of one or more datacenters in close proximity with independent power, cooling, and networking.
+   - Provide flexibility and scale to reduce customer latency.
+   - Preserve data residency with a comprehensive compliance offering.
+
  - Availability Zones: 
    - Physically separte locations within an Azure region. 
    - Each AZ consists of one or more datacenters equipped with inddependent power, cooling and networking. 
@@ -88,6 +93,7 @@ Data is replicated three times within the primary region.
 - Storage Redundancy ![SR](/assets//azure/16-storagereduncy.png)
   - Three copies of data is maintained using locally redundant storage LRS
   - In Geo-redundent Storage, data is replicated synch three time on primary region, then replicated asynch to the secondary regions. 
+  - LRS is the lowest-cost redundancy option and offers the least durability compared to other options. LRS protects your data against server rack and drive failures.
 
 - Azure Storage Services  ![SS](/assets//azure/17-datastorage.png)
   - Azure Blob: optimized for storing massive amounts of unstructured data, such as text or binary data.
@@ -155,6 +161,7 @@ Data is replicated three times within the primary region.
 - Storage cost to be paid even after stopping Azure VM.
 - Azure Reservations: committing to specific level of usage with discount percentage. 
 - Data traffic b/w Azure services within the same region is always free. 
+- Azure does not charge for the inbound flow of data, i.e., incoming traffic from the internet.
 
 - Price Calculator: is a tool that helps you estimate the cost of Azure products. The options that you can configure in the Pricing Calculator vary between products, but basic configuration options include:
   - Region, Tier, Billing options, support options, program & offers, Azure dev/test pricing. 
@@ -181,7 +188,7 @@ Data is replicated three times within the primary region.
 ### Managing and Deploying Resources
 
 - Azure Portal
-- Azure Cloud Shell: Interactive shell can be from any modern web browser. Bash or Powersheel options.
+- Azure Cloud Shell: Interactive shell can be accessed from any modern web browser. Bash or Powersheel options.
 
 - Azure CLI: It's cross-platform can be used in Mac, Linux and Windows. 
   - Azure Powershell modules on any OS for managing Azure resources. 
@@ -202,14 +209,36 @@ Data is replicated three times within the primary region.
 - Azure Advisor:  analyzes deployed Azure resources and makes recommendations based on best practices to optimize Azure deployments.
   - Use to Identify unused Azure VM or resources. 
   - Verify Azure subscription follows securtiy best practices
+  - It is not required to implement the security recommendation provided by Azure Advisor.
 
 - Azure Service Health: is a collection of services that keep you informed of general Azure status, service status that may impact you, and specific resource status that is impacting you.
   - Azure Status: global view of the health of all Azure services across all Azure regions
   - Service Health: focused view on only the services and regions that you’re using. If a service is experiencing a problem in a region you’re not using, it won’t show up here
   - Resource Health: tailored view of your actual Azure resources. It provides information about the health of your individual cloud resources
+    - You can enable notification when MS plans to perform maintainence that affect your Azure resources using Azure Service Health. 
+    - Create Alerts to get notified if a service fails in Azure Service Health. 
 
 - Azure Monitor:  maximizes the availability and performance of applications and services by collecting, analyzing, and acting on telemetry from cloud and on-premises environments.
-  - Application Insights, Log Analytics, Smart Alerts, Automation Actions, Customized Dashboards. 
-
+  - Application, VM, Container Insights, Log Analytics, Smart Alerts, Automation Actions, Customized Dashboards. 
+  - To monitor performance of on-premises machines. 
+  
 ## Learn Guides
 - Collection: https://learn.microsoft.com/en-ca/collections/o5met117w6pp01?ocid=cmms86x7u25
+
+
+### Refreshers:
+
+- A public endpoint is effectively a URL that you can use to access data and applications from outside a virtual network. This includes the public Internet. Applications inside Azure can also access this using the public endpoint. Of course, there is often additional security on the application or data to prevent malicious use of this endpoint.
+- Availability Zones: For regions that support availability zones, you can deploy your resources to zone 1, 2 or 3. There are 3 zones in each region.
+- Avaialbilty Zones: Unique physical locations within an Azure region, made up of one or more data centers; there is a minimum of three zones in each region; you can manually place your resources in an availability zone for highest availabilit
+- Total Cost of Ownership: The total cost of running a server includes not only the cost of the machine (hardware), and the software, but also the costs of hosting that machine including electricity, real estate, Internet, and salaries of the employees needed to manage the machine.
+- Required Azure Resources for VM: A virtual machine needs a network card, storage and a virtual network. It does not need a public IP address. In fact, most Azure VMs are private and are not accessible from the Internet.
+- Azure Scalesets: Scalesets are groups of VMs, managed as a single unit. You can set rules for scaling up or scaling down.
+- Agility means that you can deploy and configure cloud-based resources quickly as app requirements change.
+- Scalability means that you can add RAM, CPU, or entire virtual machines to a configuration. 
+- Elasticity means that you can configure cloud-based apps to take advantage of autoscaling, so apps always have the resources they need. 
+- High availability means that cloud-based apps can provide a continuous user experience with no apparent downtime, even when things go wrong.
+- ![Managing Azure Resources](/assets/azure/azurecli.png)
+- Azure Firewall is a managed, cloud-based n/w securtiy service that protects Azure Virtual Network resources. 
+- IoT Hub(Centralized message hub for bi-directional communicaiton) & IoT Central(Web UI enables users to monitor devices, create rules, and manage devices throughout the life cycle) are two IoT offerered on the Azure. 
+- 
