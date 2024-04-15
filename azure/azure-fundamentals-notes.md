@@ -241,4 +241,4 @@ Data is replicated three times within the primary region.
 - ![Managing Azure Resources](/assets/azure/azurecli.png)
 - Azure Firewall is a managed, cloud-based n/w securtiy service that protects Azure Virtual Network resources. 
 - IoT Hub(Centralized message hub for bi-directional communicaiton) & IoT Central(Web UI enables users to monitor devices, create rules, and manage devices throughout the life cycle) are two IoT offerered on the Azure. 
-- 
+- The first thing created after an Azure account is Tenant. Allows to manage your Azure subscriptions and resources. 
