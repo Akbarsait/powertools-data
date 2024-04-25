@@ -12,7 +12,7 @@ DAX queries have a simple syntax comprised of just one required keyword, EVALUAT
 
 #### Enable DAX query 
 As of Mar 2024, DAX query is in preview mode.  To enable it go to File > Options and Settings > Options > Preview features and clicked the check box next to DAX query view
-![Enable DAX Query](/assets/dax/daxqueries-1.png)
+![Enable DAX Query](https://akbarsait.github.io/powertools-data/assets/dax/daxqueries-1.png)
 
 ### DAX Query Tutorials
 - Weaving DataOps into Microsoft Fabric - Version Control and Testing: [](https://www.youtube.com/watch?v=WyMQSyf3NvM)
