@@ -3,7 +3,7 @@ A collection of notes, exploration, learning and practices using the power platf
 
 - **Azure**
   - [Azure Container App Notes](./azure/azure-container-apps-notes.md)
-  - [Azure Fundamental Notes](./azure/azure-fundamentals-notes.mdazure-fundamentals-notes.md)
+  - [Azure Fundamental Notes](./azure/azure-fundamentals-notes.md)
 
 - **Microsoft Fabric**
   - [Implementing Data Lakehouse](./fabric/notes-guides/fabric-implementing-datalakehouse.md)
