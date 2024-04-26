@@ -1,4 +1,4 @@
-﻿# Cloud, Analytics & DevOps Learnings
+﻿# Analytics, Cloud, Data and Programming Notes & Learnings
 A collection of notes, exploration, learning and practices using the power platform, Power BI, programming languages and Microsoft Fabric. [View in GitHub](https://github.com/Akbarsait/powertools-data)
 
 - **Azure**
