@@ -149,7 +149,13 @@
 ## 15. Implement Azure Synapse Link with Azure Cosmos DB
 ## 16. Implement Azure Synapse Link for SQL
 ## 17. Get started with Azure Stream Analytics
-  - Data Streams 
+  - Data Streams  Examples
+    - Real-time clickstream data to provide recommendations. 
+    - Telemetry data to remotely monitor manufacturing experiments. 
+    - Credit Card transactions to detect fraud. 
+  - Characteristics of Stream Processing Solutions. 
+    - The source data stream is unbounded
+    - Support real-time automation or visualization. 
   - https://aka.ms/mslearn-stream-lab
 
 ## 18. Ingest streaming data using Azure Stream Analytics and Azure Synapse Analytics
