@@ -149,17 +149,33 @@
 ## 15. Implement Azure Synapse Link with Azure Cosmos DB
 ## 16. Implement Azure Synapse Link for SQL
 ## 17. Get started with Azure Stream Analytics
-  - Data Streams  Examples
-    - Real-time clickstream data to provide recommendations. 
-    - Telemetry data to remotely monitor manufacturing experiments. 
-    - Credit Card transactions to detect fraud. 
-  - Characteristics of Stream Processing Solutions. 
-    - The source data stream is unbounded
-    - Support real-time automation or visualization. 
+  - Data Streams 
+    - Examples
+      - Real-time clickstream data to provide recommendations. 
+      - Telemetry data to remotely monitor manufacturing experiments. 
+      - Credit Card transactions to detect fraud. 
+    - Characteristics of Stream Processing Solutions. 
+      - The source data stream is unbounded
+      - Support real-time automation or visualization. 
+  - Event Processing
+    - Azure stream Analytics and clusters 
+    - inputs (Azure event Hubs, IoT Hub, Blob Storage, Data Lake G2)
+    - Output (Data Lake, Data Warehouse, PBI, Generate filtered or summarized events)
+    - Queries (Select into from timestamp where...)
+  - Windows functions
+    - Tumbling, Hopping, Sliding, Session, Snapshot
   - https://aka.ms/mslearn-stream-lab
 
 ## 18. Ingest streaming data using Azure Stream Analytics and Azure Synapse Analytics
+  - Stream Ingestion Scenarios
+  - Configure inputs and outputs (Streaming data inputs, Azure Synapse Analytics outputs, Azure Data Lake Storage G2 outputs)
+  - Define a query to select, filter and aggregate data (selecting fields, filtering event data)
+  - Run a job to ingest data (Query data in relation data warehouse, query data in a data lake)
 ## 19. Visualize real-time data with Azure Stream Analytics and Power BI
+  - Use a PBI output in Azure Stream Analytics > Output alias, Group workspace, Dataset/table name, Authorize connection. 
+  - Creat a query for real-time visualization
+  - Creat real-time data viz in PBI > Dashboard
+  
 ## 20. Introduction to Microsoft Purview
 ## 21. Integrate Microsoft Purview and Azure Synapse Analytics
 ## 22. Explore Azure Databricks
