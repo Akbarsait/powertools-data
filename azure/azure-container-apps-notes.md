@@ -3,9 +3,9 @@ Notes from the Azure Container Apps exploration.
 
 Azure Container Apps is a fully managed Kubernetes-based application platform that helps you deploy apps from code or containers without orchestrating complex infrastructure. Build heterogeneous modern apps or microservices with unified centralized networking, observability, dynamic scaling, and configuration for higher productivity. Design resilient microservices with full support for Dapr and dynamic scaling powered by KEDA.
 
-- More details: https://azure.microsoft.com/en-ca/products/container-apps
-- Roadmap and issues for Azure Container Apps: https://github.com/microsoft/azure-container-apps
-- Overview and Getting started: https://learn.microsoft.com/en-us/azure/container-apps/overview
+- More details: [](https://azure.microsoft.com/en-ca/products/container-apps)
+- Roadmap and issues for Azure Container Apps: [](https://github.com/microsoft/azure-container-apps)
+- Overview and Getting started: [](https://learn.microsoft.com/en-us/azure/container-apps/overview)
 
 ## Learning Guides 
 - Administer containers in Azure: https://learn.microsoft.com/en-us/training/paths/administer-containers-in-azure/
