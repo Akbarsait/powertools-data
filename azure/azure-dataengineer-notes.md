@@ -177,7 +177,44 @@
   - Creat real-time data viz in PBI > Dashboard
   
 ## 20. Introduction to Microsoft Purview
+  - About
+    - It is unified data-governance service
+    - Data mapping (Automate and manage metadata at scale)
+    - Data Catalog (data discovery)
+    - Data Estate Insights (Access data estate health)
+    - Data Policy (Govern access to data)
+  - Handling
+    - Loading data in the Data Map (Mapping/Scanning data)
+    - Browser and Search information (Semantic Search and browser, glossary & workflows)
+    - Data Lineage
+  - Lab: [Integrat Azure Synapse Analytics & MS Purview] (https://aka.ms/mslearn-synapse-purview)
+  
 ## 21. Integrate Microsoft Purview and Azure Synapse Analytics
+  - Catalog Synapse data access in Purview
+  - Connect Purview to a synapse workspace
+  - Search a Purview catalog in Synapse Studio
+  - Track data lineage in piplelines
+
 ## 22. Explore Azure Databricks
+  - Azure Databricks is a unified, open analytics platform for building, deploying, sharing, and maintaining enterprise-grade data, analytics, and AI solutions at scale. 
+  - Fully managed, cloud-based data analytics platform that built on Apache Spark with a web-based portal. 
+  - Azure Databricks workloads:
+    - Data Science and Engineering
+    - Machine Learning
+    - SQL Warehouse
+  - Key Needs/concepts: 
+    - Apache Spark Clusters - Provide highly scalable compute for dist. data processing
+    - Databricks File System DBFS (mount storage) - distributed shared storage for data lakes
+    - Notebooks - interactive env. for combining code, notes and images
+    - Hive metastore - provide relations abstraction layer, enabling you to define tables based on data in files. 
+    - Delta Lake - build on the metastore to enable common relations database capabilities
+    - SQL Warehouse - provide relational compute endpoints for querying data in tables. 
+  - Lab: [Explore Azure Databricks](https://aka.ms/mslearn-adb)
 ## 23. Use Apache Spark in Azure Databricks
+  - Get to know Spark
+  - Creae a Spark cluster: Cluster mode (Standar, High Concurrecy, Single ode)
+  - Use Spark in notebooks. 
+  - Use Spark to work with data files: (Exploring data with dataframes, filtering/grouping and using SQL experssion in Spark)
+  - Visualize data (built-in notebook charts, using graphics pakages in code)
+  - Lab: [Explore Azure Databricks](https://aka.ms/mslearn-)
 ## 24. Run Azure Databricks Notebooks with Azure Data Factory
