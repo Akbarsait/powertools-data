@@ -1,11 +1,12 @@
-# DP-600 
+# Microsoft Fabric Analytics Engineer (DP-600)
+
 Notes taken from the Microsoft four days ESI class for the Fabric DP-600 training. 
 
-- Course Learn: https://learn.microsoft.com/en-us/training/courses/dp-600t00
-- Setting up Learn Profile: http://www.aka.ms/MyMicrosoftLearnProfile
+- [Course Learn: ](https://learn.microsoft.com/en-us/training/courses/dp-600t00)
+- [Setting up Learn Profile:](http://www.aka.ms/MyMicrosoftLearnProfile)
 
 ## 1. Administer Microsoft Fabric
-- https://aka.ms/fabric-admin
+- [https://aka.ms/fabric-admin](https://aka.ms/fabric-admin)
 - Fabric must be enabled in tenant by Fabric Admin, M365 Admin
 - Fabric Architecture
   - Single SaaS lake
@@ -13,15 +14,17 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   - All workloads automatically store data in OneLake workspace folders. 
   - All data is organized in a hierarchical namespace. 
   - Data in OneLake is automatically indexed for discovery, MIP labels, linaged, PII Scans, Sharing, Governance and compliance. 
-- Fabric Concepts : https://learn.microsoft.com/en-us/fabric/enterprise/licenses
+  
+- [Fabric Concepts : ](https://learn.microsoft.com/en-us/fabric/enterprise/licenses)
   - Tenant
   - Capacity
   - Domain 
   - Workspace: collection of items and more on access control on who can access what. Roles and capabilities. 
-  - Items:   
-- https://learn.microsoft.com/en-us/fabric/enterprise/optimize-capacity
-- https://learn.microsoft.com/en-us/fabric/data-engineering/capacity-settings-management
-- https://learn.microsoft.com/en-us/fabric/governance/domains
+  - Items
+  - Further Readings:
+    - [https://learn.microsoft.com/en-us/fabric/enterprise/optimize-capacity](https://learn.microsoft.com/en-us/fabric/enterprise/optimize-capacity)
+    - [https://learn.microsoft.com/en-us/fabric/data-engineering/capacity-settings-management](https://learn.microsoft.com/en-us/fabric/data-engineering/capacity-settings-management)
+    - [https://learn.microsoft.com/en-us/fabric/governance/domains](https://learn.microsoft.com/en-us/fabric/governance/domains)
 
 - Fabric Admin Tasks
   - Security & access control
@@ -62,7 +65,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
     - SQL Analytics endpoint
     - Dataflow Gen2
     - Data Pipeline: data factory drag and drop, refine data. 
-- https://aka.ms/fabric-lakehouse
+- [Lab:](https://aka.ms/fabric-lakehouse)
 - OneLake Security 
 - Permission (Workspace)
   - Admin, Contributor, Member, Viewer
@@ -83,7 +86,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   - Visualize data by using built-in notebooks charts, pandas
 - Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
 -  Spark supports multiple coding languages, including Scala, Java, and others. In this exercise, we'll use PySpark, which is a Spark-optimized variant of Python. PySpark is one of the most commonly used languages on Spark and is the default language in Fabric notebooks.
-- 
+  
 ## 4. Work with Delta Lake tables
 - Relational tables that support querying and data modification
 - Support for ACID transactions. 
@@ -101,10 +104,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   - External Tables: create external tables for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
 ## 5. Secure a Fabric lakehouse
-
-
 ## 6. Ingest Data with Dataflow Gen 2 in Fabric
-
 - Low code GUI envi. for defining ETL Solutions. 
 - Similar to Power Query in PBI
 - Extract data from multiple sources, transform, load into a destination. 
@@ -119,7 +119,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - Integrate Dataflow Gen2 and pipelines
   - use a dataflow to define an ETL process
   - Add it as an activity to a pipeline
-- aka.ms/maslearn-dataflow-gen2
+- [https://aka.ms/maslearn-dataflow-gen2](https://aka.ms/maslearn-dataflow-gen2)
 
 ## 7. Use Data Factory Pipelines in Microsoft Fabric
 - A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement extract, transform, and load (ETL) or extract, load, and transform (ELT) solutions for data ingestion through the creation of pipelines.
@@ -130,9 +130,8 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   - Activities (copy data, Data transformation & Control flow (if conditon, ForEach))
   - Parameters
   - Pipeline runs
-  - How to Send Email: https://learn.microsoft.com/en-us/azure/data-factory/how-to-send-email
-  - https://esi.learnondemand.net/Class/605391
-
+  - [How to Send Email: ](https://learn.microsoft.com/en-us/azure/data-factory/how-to-send-email)
+  - [https://esi.learnondemand.net/Class/605391](https://esi.learnondemand.net/Class/605391)
 
 ## 8. Ingest data with Spark and Microsoft Fabric notebooks
 - Fabric shortcuts offer easy connection to external sources. 
@@ -142,11 +141,9 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - Use Delta format for durability and scale
 - Optimize read and write with V-Order and optimized write options. 
 
-
 ## 9. Organize a lakehouse using medalliion architechture
 - Medallion Arch is creating data in rich format that can be used in PBI. 
   - Load data Raw (Bronze) > Validate and Clean data like remove nulls/duplicates (Silver) >Enriched like join, Aggreated date (Gold) as report/semantic model ready
-
 
 ## 10. Get Started with data warehouse in Microsoft Fabric
 - Data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.
@@ -156,16 +153,16 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - Choose between warehouse and lakehouse
   - Warehouse (Structured, Multi-table transactions, High performance, expansive security(objec-level, DDL/DML, dynamic data masking), T-SQL, Spark)
   - Lakehouse (Semi-structured or unstructured data, scalable and cost effective, Supports Delta Lake features, T-SQL security (row/table level), T-SQL, Spark)
-  - https://blog.fabric.microsoft.com/en-us/blog/lakehouse-vs-data-warehouse-deep-dive-into-use-cases-differences-and-architecture-designs?trk=public_post_comment-text
-  - https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-data-store
+  - [Futher Reading on Lakehouse vs Data Warehouse:](https://blog.fabric.microsoft.com/en-us/blog/lakehouse-vs-data-warehouse-deep-dive-into-use-cases-differences-and-architecture-designs?trk=public_post_comment-text)
+  - [Decision Guide Data Store](https://learn.microsoft.com/en-us/fabric/get-started/decision-guide-data-store)
 - Semintic Model: Fabri automatically creates a default semantic model for PBI user to use for reports. 
 - Visualize data: Can create PBI reports directly from within the Fabric warehouse. 
-- https://aka.ms/fabric-warehouse
+- [Futher Reading](https://aka.ms/fabric-warehouse)
 
 ## 11. Load data into a warehouse
 - In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables. 
 - Stating of data, full vs incremental data load. 
-- 
+
 
 ## 12. Query a warehouse
 - In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. The rich set of experiences built into Microsoft Fabric workspace enables customers to reduce their time to insights by having an easily consumable, always connected semantic model that is integrated with Power BI in DirectLake mode.
@@ -184,15 +181,14 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - PBI data modeling best practices
 - Use PBI large semantic model storage format
 
-
 ## 16. Create Model relationsship
-- Relationship Management - DAX: https://dax.guide/functions/relationships-management/
+- [Relationship Management - DAX:](https://dax.guide/functions/relationships-management/)
 - Apply Star schema design principles
 - Set relationship cardinality and cross-filter direction
   - one-to-many or many-to-one
   - one-to-one
   - Many-to-many
-  - Use Relationship: https://dax.guide/userelationship/
+  - [Use Relationship: ](https://dax.guide/userelationship/)
 - Using DAX relationship functions. 
 - Understanding releationship evaluation
   - Regular relationship, limited relationship, Precedence rules, Performance preference. 
@@ -203,25 +199,25 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - Performance Analyzer
 - DAX Studio
 - Best Practice Analyzer in Tabular Editor
-- Model data with Power BI - Training | Microsoft Learn - https://learn.microsoft.com/en-us/training/paths/model-data-power-bi/
-- Bidirectional relationships and ambiguity in DAX - SQLBI : https://www.sqlbi.com/articles/bidirectional-relationships-and-ambiguity-in-dax/
+- [Model data with Power BI](https://learn.microsoft.com/en-us/training/paths/model-data-power-bi/)
+- [Bidirectional relationships and ambiguity in DAX - SQLBI : ](https://www.sqlbi.com/articles/bidirectional-relationships-and-ambiguity-in-dax/)
 - VertiPag engine process: Query > Tabular Formula > Formula engine (DAX)> Storage engine (VertiPag (import)), Direct Query > Data Source. 
 - Tabluar Editor: The best practice analyzer scans model for issues whenever a change is made the model.  
 
 ## 18. Enforce PBI model security
 - Role level security
 - Object level secruity
-- Enforce Power BI model security: https://aka.ms/fabric-model-security
-- Power BI implementation planning: Security: https://learn.microsoft.com/en-us/power-bi/guidance/powerbi-implementation-planning-security-overview
-- Data Activator: https://learn.microsoft.com/en-us/fabric/data-activator/data-activator-introduction
+- [Enforce Power BI model security: ](https://aka.ms/fabric-model-security)
+- [Power BI implementation planning: Security: ](https://learn.microsoft.com/en-us/power-bi/guidance/powerbi-implementation-planning-security-overview)
+- [Data Activator: ](https://learn.microsoft.com/en-us/fabric/data-activator/data-activator-introduction)
 
 ## Exam Related:
-- Practice Exam: https://aka.ms/DP600-practice
-- Exam Readiness Videos: https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=dp-600
-- Exam Cram for DP-600: How to pass Exam DP-600: https://learn.microsoft.com/en-us/shows/learn-live/exam-cram-for-dp-600-ep101-how-to-pass-exam-dp-600-implementing-analytics-solutions-using-microsoft-fabric-beta-pacific?WT.mc_id=academic-116720-lbugnion
-- Microsoft Fabric exercises :https://aka.ms/dp600labs
-- Implement Real-Time Analytics with Microsoft Fabric: https://learn.microsoft.com/en-us/training/paths/explore-real-time-analytics-microsoft-fabric/
-- Practice Assessments for Microsoft Certifications: aka.ms/examprep
-- Study guide for Exam DP-600: Implementing Analytics Solutions Using Microsoft Fabric: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-600
-- Microsoft Fabric Learn Together: https://aka.ms/learntogether
-- Exam duration and exam experience: https://learn.microsoft.com/en-us/credentials/support/exam-duration-exam-experience
+-[ Practice Exam: ](https://aka.ms/DP600-practice)
+- [Exam Readiness Videos: ](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=dp-600)
+- [Exam Cram for DP-600: How to pass Exam DP-600: ](https://learn.microsoft.com/en-us/shows/learn-live/)exam-cram-for-dp-600-ep101-how-to-pass-exam-dp-600-implementing-analytics-solutions-using-microsoft-fabric-beta-pacific?WT.mc_id=academic-116720-lbugnion
+- [Microsoft Fabric exercises :](https://aka.ms/dp600labs)
+- [Implement Real-Time Analytics with Microsoft Fabric:](https://learn.microsoft.com/en-us/training/paths/explore-real-time-analytics-microsoft-fabric/)
+- [Practice Assessments for Microsoft Certifications: ](https://aka.ms/examprep)
+- [Study guide for Exam DP-600: Implementing Analytics Solutions Using Microsoft Fabric: ](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-600)
+- [Microsoft Fabric Learn Together: ](https://aka.ms/learntogether)
+- [Exam duration and exam experience: ](https://learn.microsoft.com/en-us/credentials/support/exam-duration-exam-experience)
