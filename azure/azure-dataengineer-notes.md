@@ -45,7 +45,7 @@
 ## 5. Use Azure Synapse serverless SQL pools to transform data in a data lake
 
 ## 6. Create a lake database in Azure Synapse Analytics
-![alt text](image-1.png)
+![Data lakehouse](/assets/azure/dataengg/lakedatabase.png)
 - Concept:
   - Relation metadata layer over files in data lake. Data is stored in files(csv, json, parquet)
   - Query it using SQL (T-SQL in Serverless Pools or Spark SQL API)
