@@ -212,7 +212,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - [Data Activator: ](https://learn.microsoft.com/en-us/fabric/data-activator/data-activator-introduction)
 
 ## Exam Related:
--[ Practice Exam: ](https://aka.ms/DP600-practice)
+- [Practice Exam: https://aka.ms/DP600-practice](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/practice/assessment?assessment-type=practice&assessmentId=90&practice-assessment-type=certification)
 - [Exam Readiness Videos: ](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?terms=dp-600)
 - [Exam Cram for DP-600: How to pass Exam DP-600: ](https://learn.microsoft.com/en-us/shows/learn-live/)exam-cram-for-dp-600-ep101-how-to-pass-exam-dp-600-implementing-analytics-solutions-using-microsoft-fabric-beta-pacific?WT.mc_id=academic-116720-lbugnion
 - [Microsoft Fabric exercises :](https://aka.ms/dp600labs)
