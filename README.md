@@ -4,7 +4,8 @@ A collection of notes, exploration, learning and practices using the power platf
 - **Azure**
   - [Azure Container App Notes](./azure/azure-container-apps-notes.md)
   - [Azure Fundamental Notes](./azure/azure-fundamentals-notes.md)
-  - [Azure Data Engineer (DP-203) Notes/Guide](./azure/azure-dataengineer-notes.md)
+  - [Azure Data Engineer (DP-203) Notes](./azure/azure-dataengineer-notes.md)
+  - [Developing solutions for Microsoft Azure (AZ-204) Notes](./azure/developing-solutions-azure-notes.md)
   
 - **Microsoft Fabric**
   - [Implementing Data Lakehouse](./fabric/notes-guides/fabric-implementing-datalakehouse.md)
