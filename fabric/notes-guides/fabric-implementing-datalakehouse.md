@@ -1,6 +1,5 @@
 ## Implementing a Data Lakehouse with Microsoft Fabric 
 
-
 **Fabric Intro (Introduction to end-to-end analytics using Microsoft Fabric)**
  - Introduction: https://aka.ms/fabric-intro
  - Fabric Resources - https://learn.microsoft.com/en-ca/collections/d1epcy18no5gx7?sharingId=FAB25DD50944F75A&ocid=cmmglk3kdes
