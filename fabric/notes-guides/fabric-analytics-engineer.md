@@ -221,3 +221,20 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - [Study guide for Exam DP-600: Implementing Analytics Solutions Using Microsoft Fabric: ](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-600)
 - [Microsoft Fabric Learn Together: ](https://aka.ms/learntogether)
 - [Exam duration and exam experience: ](https://learn.microsoft.com/en-us/credentials/support/exam-duration-exam-experience)
+
+## Quick Reference:
+- Version control is available only with the Azure Repos repository with only Git currently supported. 
+- OneLake shortcuts support multiple filesystem data sources. These include internal OneLake locations, Azure Data Lake Storage (ADLS) Gen2, Amazon S3, and Dataverse.
+- A managed table, it is stored within the Fabric storage and becomes immediately accessible through the SQL endpoint upon connection.
+- Enabling Scale-out in Power BI: 
+  - At the semantic model level, set Large semantic model dataset storage format to On. 
+  - Enable scale-out using the Datasets REST APIs
+- Power BI Desktop introduces a new way to author, collaborate, and save your projects. Allows to save your work as a Power BI Project (PBIP), report and semantic model item definitions are saved as individual plain text files in a simple, intuitive folder structure. The PBIP will create one file and two folders, PBIP.Dataset contains definition folder that is use to host the .tmdl files.
+- XMLA endpoints: Workspaces use the XML for Analysis (XMLA) protocol for communications between client applications and the engine that manages your Power BI workspaces and semantic models. XMLA is the communication protocol used by the Microsoft Analysis Services engine, which runs Power BI's semantic modeling, governance, lifecycle, and data management. Data sent over the XMLA protocol is fully encrypted.
+- Row-level security only applies to queries on a Warehouse or SQL analytics endpoint in Fabric. Power BI queries on a warehouse in Direct Lake mode will fall back to Direct Query mode to abide by row-level security.
+- Calcualted Column vs Measure
+  1. Calculated columns appear in columns in the data view, measure does not, measure only appears in the view.
+  2. Calculated columns appear in the Model view, not Measure.
+- The Lakehouse in Microsoft Fabric provides a feature to efficiently load common file types to an optimized Delta table ready for analytics. The Load to Table feature allows users to load a single file or a folder of files to a table with Delta Lake table format with V-Order optimization enabled.
+- The Microsoft Capacity Metrics app, also known as the metrics app, serves as a monitoring tool within the Microsoft Power BI service. It offers functionalities to track and analyze the resource utilization.
+- Dynamic Management Views (DMVs) provided for you to receive live SQL query lifecycle insights: sys.dm_exec_connections, sys.dm_exec_sessions, sys.dm_exec_request
