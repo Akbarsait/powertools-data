@@ -1,6 +1,6 @@
 # Microsoft Fabric Analytics Engineer (DP-600)
 
-Notes taken from the Microsoft four days ESI class for the Fabric DP-600 training. 
+Notes taken from the Microsoft four days ESI class for the Fabric DP-600 training. Also, additional reference materials, links captured for the preparation of DP-600 exam. 
 
 - [Course Learn: ](https://learn.microsoft.com/en-us/training/courses/dp-600t00)
 - [Setting up Learn Profile:](http://www.aka.ms/MyMicrosoftLearnProfile)
@@ -222,7 +222,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - [Microsoft Fabric Learn Together: ](https://aka.ms/learntogether)
 - [Exam duration and exam experience: ](https://learn.microsoft.com/en-us/credentials/support/exam-duration-exam-experience)
 
-## Quick Reference:
+## Exam Preparation - Quick Reference:
 - Version control is available only with the Azure Repos repository with only Git currently supported. 
 - OneLake shortcuts support multiple filesystem data sources. These include internal OneLake locations, Azure Data Lake Storage (ADLS) Gen2, Amazon S3, and Dataverse.
 - A managed table, it is stored within the Fabric storage and becomes immediately accessible through the SQL endpoint upon connection.
@@ -238,3 +238,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - The Lakehouse in Microsoft Fabric provides a feature to efficiently load common file types to an optimized Delta table ready for analytics. The Load to Table feature allows users to load a single file or a folder of files to a table with Delta Lake table format with V-Order optimization enabled.
 - The Microsoft Capacity Metrics app, also known as the metrics app, serves as a monitoring tool within the Microsoft Power BI service. It offers functionalities to track and analyze the resource utilization.
 - Dynamic Management Views (DMVs) provided for you to receive live SQL query lifecycle insights: sys.dm_exec_connections, sys.dm_exec_sessions, sys.dm_exec_request
+- By default, sharing a lakehouse grants users read permission to the lakehouse, the associated SQL endpoint, and the default semantic model. In addition to these default permissions, you can grant:
+  1. ReadData permission on SQL endpoint to access data without SQL policy.
+  2. ReadAll permission on the lakehouse to access all data using Apache Spark.
+  3. Build permission on the default semantic model to allow building Power BI reports on top of the semantic model.
