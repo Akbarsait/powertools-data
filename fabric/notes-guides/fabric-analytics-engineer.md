@@ -69,7 +69,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - OneLake Security 
 - Permission (Workspace)
   - Admin, Contributor, Member, Viewer
-  
+- [Creating and Using Microsoft Fabric Lakehouse](https://akbarsait.com/blog/2024/05/31/creating-and-using-microsoft-fabric-lakehouse/)
 ## 3. Using Apache Spark in Microsoft Fabric
 - aka.ms/apache-spark
 - Distributed File System, Resilent Distributed dataset, work faster with data. 
@@ -236,7 +236,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   1. Calculated columns appear in columns in the data view, measure does not, measure only appears in the view.
   2. Calculated columns appear in the Model view, not Measure.
 - The Lakehouse in Microsoft Fabric provides a feature to efficiently load common file types to an optimized Delta table ready for analytics. The Load to Table feature allows users to load a single file or a folder of files to a table with Delta Lake table format with V-Order optimization enabled.
-- The Microsoft Capacity Metrics app, also known as the metrics app, serves as a monitoring tool within the Microsoft Power BI service. It offers functionalities to track and analyze the resource utilization.
+- **Microsoft Capacity Metrics app/metrics app:** serves as a monitoring tool within the Microsoft Power BI service. It offers functionalities to track and analyze the resource utilization.
 - **Dynamic Management Views** (DMVs) provided for you to receive live SQL query lifecycle insights: sys.dm_exec_connections, sys.dm_exec_sessions, sys.dm_exec_request
 - **Permission in Lakehouse:** By default, sharing a lakehouse grants users read permission to the lakehouse, the associated SQL endpoint, and the default semantic model. In addition to these default permissions, you can grant:
   1. ReadData permission on SQL endpoint to access data without SQL policy.
@@ -249,3 +249,11 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   - Allows data recovery/corruption by retaining previous state of data. 
   - Allows to create historical report by point-in-time in the past. 
 - **Surrogate Key:**  Surrogate keys are typically used in dimension tables rather than fact tables. In a data warehouse, a surrogate key is a unique identifier assigned to each record in a dimension table, usually for internal processing and joining purposes. It provides a stable reference to the dimension record, regardless of any changes in the natural key or other attributes.
+- **Roles in Workspace:** Roles are Admin, Member, Contributor and Viewer. Viewer role will only have the following access. 
+  - View and read content of data pipelines, notebooks, Spark job definitions, ML models and experiments, and Event streams.
+  - View and read content of KQL databases, KQL query-sets, and real-time dashboards.	
+  - Connect to SQL analytics endpoint of Lakehouse or the Warehouse	
+  - Read Lakehouse and Data warehouse data and shortcuts2 with T-SQL through TDS endpoint.	
+  - Execute or cancel execution of data pipelines.	
+  - View execution output of data pipelines, notebooks, ML models and experiments.	
+  - [Roles in workspaces in Microsoft Fabric - Microsoft Fabric](https://learn.microsoft.com/en-ca/fabric/get-started/roles-workspaces)
