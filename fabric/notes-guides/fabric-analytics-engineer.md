@@ -1,9 +1,9 @@
 # Microsoft Fabric Analytics Engineer (DP-600)
 
-Notes taken from the Microsoft four days ESI class for the Fabric DP-600 training. Also, additional reference materials, links captured for the preparation of DP-600 exam. 
+Notes from the Microsoft ESI session for the Fabric DP-600 training. Also, additional reference materials, links captured for the preparation of DP-600 exam. 
 
 - [Course Learn: ](https://learn.microsoft.com/en-us/training/courses/dp-600t00)
-- [Setting up Learn Profile:](http://www.aka.ms/MyMicrosoftLearnProfile)
+- [Microsoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/?practice-assessment-type=certification)
 
 ## 1. Administer Microsoft Fabric
 - [https://aka.ms/fabric-admin](https://aka.ms/fabric-admin)
@@ -70,6 +70,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 - Permission (Workspace)
   - Admin, Contributor, Member, Viewer
 - [Creating and Using Microsoft Fabric Lakehouse](https://akbarsait.com/blog/2024/05/31/creating-and-using-microsoft-fabric-lakehouse/)
+
 ## 3. Using Apache Spark in Microsoft Fabric
 - aka.ms/apache-spark
 - Distributed File System, Resilent Distributed dataset, work faster with data. 
@@ -225,6 +226,7 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
 ## Exam Preparation - Quick Reference:
 - Version control is available only with the Azure Repos repository with only Git currently supported. 
 - OneLake shortcuts support multiple filesystem data sources. These include internal OneLake locations, Azure Data Lake Storage (ADLS) Gen2, Amazon S3, and Dataverse.
+- Only Fabric lakehouses can shortcut to other lakehouses. Fabric data warehouses can use data Pipelines but cannot use shortcuts.
 - A managed table, it is stored within the Fabric storage and becomes immediately accessible through the SQL endpoint upon connection.
 - Enabling Scale-out in Power BI: 
   - At the semantic model level, set Large semantic model dataset storage format to On. 
@@ -257,3 +259,18 @@ Notes taken from the Microsoft four days ESI class for the Fabric DP-600 trainin
   - Execute or cancel execution of data pipelines.	
   - View execution output of data pipelines, notebooks, ML models and experiments.	
   - [Roles in workspaces in Microsoft Fabric - Microsoft Fabric](https://learn.microsoft.com/en-ca/fabric/get-started/roles-workspaces)
+- Git Integration with Fabric
+  - [Create your first pipeline](https://learn.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=python%2Cbrowser)
+  - [Build GitHub repositories](https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml)
+  - [Git integration with Fabric ](https://learn.microsoft.com/en-us/fabric/cicd/git-integration/intro-to-git-integration)
+  - [Lifecycle management best practices ](https://learn.microsoft.com/en-us/fabric/cicd/best-practices-cicd)
+- The native refresh scheduler for dataflows, just like semantic models, can be scheduled every 30 minutes.
+- **Slowly Changing Dimension (SCD)** [Explore data load strategies ](https://learn.microsoft.com/en-ca/training/modules/load-data-into-microsoft-fabric-data-warehouse/2-explore-data-load-strategies)
+  - Type 0 SCD attributes never change
+  - Type 1 SCD: Overwrites existing data, doesn't keep history.
+  - Type 2 SCD: Adds new records for changes, keeps full history for a given natural key.
+  - Type 3 SCD: History is added as a new column.
+  - Type 4 SCD: A new dimension is added.
+  - Type 5 SCD: When certain attributes of a large dimension change over time, but using type 2 isn't feasible due to the dimension’s large size.
+  - Type 6 SCD: Combination of type 2 and type 3.
+- **Dimension and Fact:** Think of dimension table handles on "who, what, where, when, why” of your data warehouse. It’s like the descriptive backdrop that gives context to the raw numbers found in the fact tables. For example, if you’re running an online store, your fact table might contain the raw sales data - how many units of each product were sold. But without a dimension table, you wouldn’t know who bought those products, when they were bought, or where the buyer is located.
