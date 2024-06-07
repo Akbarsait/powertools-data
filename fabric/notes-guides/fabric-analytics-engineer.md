@@ -225,15 +225,20 @@ Notes from the Microsoft ESI session for the Fabric DP-600 training. Also, addit
 
 ## Exam Preparation - Quick Reference:
 - Version control is available only with the Azure Repos repository with only Git currently supported. 
-- OneLake shortcuts support multiple filesystem data sources. These include internal OneLake locations, Azure Data Lake Storage (ADLS) Gen2, Amazon S3, and Dataverse.
-- Only Fabric lakehouses can shortcut to other lakehouses. Fabric data warehouses can use data Pipelines but cannot use shortcuts.
-- A managed table, it is stored within the Fabric storage and becomes immediately accessible through the SQL endpoint upon connection.
-- Enabling Scale-out in Power BI: 
+- **Shortcuts**
+  - OneLake shortcuts support multiple filesystem data sources. These include internal OneLake locations, Azure Data Lake Storage (ADLS) Gen2, Amazon S3, and Dataverse. OneLake shortcuts can now be created using the Fabric REST API
+  - Only Fabric lakehouses can shortcut to other lakehouses. Fabric data warehouses can use data Pipelines but cannot use shortcuts.
+  - A managed table, it is stored within the Fabric storage and becomes immediately accessible through the SQL endpoint upon connection.
+  - Shortcuts can be setup for individual files, but more commonly to a folder. If you create a shortcut to a ‘base’ folder, it will monitor and sync all files in subfolders.
+  - For internal shortcuts, a user will need access to both the source and the target location to be able to access the shortcut data in Fabric.
+  - Be careful of cross-region egress fees. If your Fabric capacity is in UK-South region (for example), but your ADLS storage account, you will be charged for ‘cross-region’ egress fees ($0.01 per GB)
+- **Enabling Scale-out in Power BI**: 
   - At the semantic model level, set Large semantic model dataset storage format to On. 
   - Enable scale-out using the Datasets REST APIs
 - Power BI Desktop introduces a new way to author, collaborate, and save your projects. Allows to save your work as a Power BI Project (PBIP), report and semantic model item definitions are saved as individual plain text files in a simple, intuitive folder structure. The PBIP will create one file and two folders, PBIP.Dataset contains definition folder that is use to host the .tmdl files.
 - **XMLA endpoints:** Workspaces use the XML for Analysis (XMLA) protocol for communications between client applications and the engine that manages your Power BI workspaces and semantic models. XMLA is the communication protocol used by the Microsoft Analysis Services engine, which runs Power BI's semantic modeling, governance, lifecycle, and data management. Data sent over the XMLA protocol is fully encrypted.
 - **RLS:** Row-level security only applies to queries on a Warehouse or SQL analytics endpoint in Fabric. Power BI queries on a warehouse in Direct Lake mode will fall back to Direct Query mode to abide by row-level security.
+- **OLS** Object-level Security enables restricting access to semantic model objects, such as tables, columns, and calculations based on these columns. RLS (both static and dynamic) restricts access to specific attributes in the semantic model, such as location, category, etc.
 - **Calcualted Column vs Measure**
   1. Calculated columns appear in columns in the data view, measure does not, measure only appears in the view.
   2. Calculated columns appear in the Model view, not Measure.
@@ -274,3 +279,13 @@ Notes from the Microsoft ESI session for the Fabric DP-600 training. Also, addit
   - Type 5 SCD: When certain attributes of a large dimension change over time, but using type 2 isn't feasible due to the dimension’s large size.
   - Type 6 SCD: Combination of type 2 and type 3.
 - **Dimension and Fact:** Think of dimension table handles on "who, what, where, when, why” of your data warehouse. It’s like the descriptive backdrop that gives context to the raw numbers found in the fact tables. For example, if you’re running an online store, your fact table might contain the raw sales data - how many units of each product were sold. But without a dimension table, you wouldn’t know who bought those products, when they were bought, or where the buyer is located.
+- **Data Ingestion in Fabric**   
+
+|  Method | When to Consider  |  When Not to Consider |
+|---      |---    |---   |
+| **Dataflow**  | 1. To use 150+ external connectors, 2. No/ low-code solution, 3. Accessing on-premise data, Can do Extract, 4. Transform AND Load, 5. When you need to get more than one dataset at a time and combine them (although you might want to space this out to allow data validation).|  1. Difficult to implement data validation 2.  Currently struggles with large datasets (although Fast Copy has recently been introduced which should speed up your ETL.  |
+| **Data Pipeline** Primarily an orchestration tool (do this, then do that). Can also be used to get data into Fabric, using the Copy Data activity (and others!).  | 1. Large datasets (although now Dataflow has Fast Copy, so performance should be comparable between the two), 2. Importing ‘cloud’ data (e.g. data in Azure), 3. When you need control flow logic, 4. Triggering wide variety of actions in Fabric (and outside of Fabric), like Dataflows, Notebooks, Stored Procs, KQL Scripts, Webhooks, Azure Functions, Azure ML, Azure Databricks. | 1. Can’t do the Transform natively (but can embed notebooks or dataflow). 2. No ability to ‘upload’ local files 3. Does not work cross-workspace |
+| **Notebook** General purpose coding notebook which can be used to bring data into Fabric, via connecting to APIs or by using client Python libraries| 1. Extraction from APIs (using Python requests library, or similar!), 2. To use client libraries (e.g. Azure libraries, or the Hubspot client library in Python to access Hubspot data). 3. Good for code re-use (and can be parameterized),3. For data validation and data quality testing of incoming data 4. The fastest in terms of data ingestion (and most efficient for CU spend - see here) | 1. When you don’t have a Python capability in your organisation|
+||||
+
+- 
