@@ -297,11 +297,12 @@ Notes from the Microsoft ESI session for the Fabric DP-600 training. Also, addit
   - Allows to bulk edit measures and run scripts to automate measure creation.
   - Best Practice Analyser to check recommendation practices. 
   - vertipaq Analyzer
+  - Tabular Editor allows you to use C# scripts to automate changes. 
 - Power Query M Language 
   - Table.Profile: Returns a profile for the columns in table and returns the following for each column: Maximum, Minimum, average, standard deviation. count, null count, distinct count. 
   - Column quality provided the percentage of valid records in the column. 
-  - Column distribution provides an overview of the value frequency and distribution in a column. 
-  - Column profile provides statistical data about values in a column.
+  - Column distribution provides an overview of the value frequency and distribution in a column. (Error, Valid, Empty )
+  - Column profile provides statistical data about values in a column. (distinct, unique, Null)
 - Notebooks: 
   - df.summary(): Helps to evaluate the data to calculate the min, max, mean, and standard deviation values for all the string and numeric columns.
   - DESCRIBE HISTORY: To retrieve information including the operations, user, and timestamp for each write to a Delta table by running the history command.
