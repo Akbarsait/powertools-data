@@ -306,5 +306,4 @@ Notes from the Microsoft ESI session for the Fabric DP-600 training. Also, addit
 - Notebooks: 
   - df.summary(): Helps to evaluate the data to calculate the min, max, mean, and standard deviation values for all the string and numeric columns.
   - DESCRIBE HISTORY: To retrieve information including the operations, user, and timestamp for each write to a Delta table by running the history command.
-  - DESCRIBE DETAIL : To retrieve detailed information about a Delta table (for example, number of files, data size) using
-
+  - DESCRIBE DETAIL : To retrieve detailed information about a Delta table (for example, number of files, data size)

@@ -18,4 +18,4 @@ A collection of notes, exploration, learning and practices using the power platf
 
 
 - **Power BI Labs**
-  - [Sales Analytics Report Download- Design a Data Model in Power BI ](./powerbi/myreports/DesignDevelop-DataModel.pbix) - [View Image](./assets/powerbi/DesignDevelop-DataModel.png)
+  - [Sales Analytics Report Download- Design a Data Model in Power BI](./powerbi/myreports/DesignDevelop-DataModel.pbix) - [View Image](./assets/powerbi/DesignDevelop-DataModel.png){:target="_blank"}
