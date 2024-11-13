@@ -16,6 +16,8 @@ A collection of notes, exploration, learning and practices using the power platf
 - **Power BI**
   - [DAX Queries in Power BI Notes](./powerbi/notes-guides/powerbi-daxqueries.md)
 
-
 - **Power BI Labs**
   - [Sales Analytics Report Download- Design a Data Model in Power BI](./powerbi/myreports/DesignDevelop-DataModel.pbix) - [View Image](./assets/powerbi/DesignDevelop-DataModel.png)
+
+- **MS Learn Pathway**
+  - [Microsoft Learning](/development/ms-learm-pathways.md)
